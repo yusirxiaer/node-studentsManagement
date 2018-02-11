@@ -28,8 +28,9 @@ exports.doadd = function(req,res,next){
     //req.query就是对象
     //{name: 小红 ,  sex:男，  kechengs:[100,102]}
     Student.create(req.query,function(){
-        console.log("插入成功");
+        console.log("学生插入成功");
         //在课程中添加此人
+        console.log(req.query.Kechengs,req.query.sid);
         Kecheng.tianjiaxuesheng(req.query.Kechengs,req.query.sid,function(){
             res.send("插入成功");
         });

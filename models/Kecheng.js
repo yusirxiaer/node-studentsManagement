@@ -18,6 +18,7 @@ kechengSchema.statics.tianjiaxuesheng = function(kidarray,sid,callback){
             console.log("课程添加报名学生成功");
         })
     }
+    callback();
 }
 
 //model
