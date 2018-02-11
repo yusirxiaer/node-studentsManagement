@@ -16,7 +16,10 @@ app.set("view engine","ejs");
 app.use(express.static("./public"));
 
 app.get("/",router.showIndex);              //显示首页
-
-
+app.get("/add",router.showadd);
+app.get("/doadd",router.doadd);
+app.get("/edit/:sid",router.edit);
+app.get("/doedit/:sid",router.doedit);
+app.get("/remove/:sid",router.remove);
 
 app.listen(3000);
