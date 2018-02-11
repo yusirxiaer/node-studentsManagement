@@ -32,7 +32,8 @@ exports.doadd = function(req,res,next){
         //在课程中添加此人
         console.log(req.query.Kechengs,req.query.sid);
         Kecheng.tianjiaxuesheng(req.query.Kechengs,req.query.sid,function(){
-            res.send("插入成功");
+            // res.send("插入成功");
+            res.redirect('/');//重定向到首页
         });
     });
 }
